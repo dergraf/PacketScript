@@ -1,0 +1,3 @@
+# -*- Makefile -*-
+
+obj-${build_LUA}     += libxt_LUA.so

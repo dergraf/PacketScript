@@ -1,0 +1,14 @@
+PacketScript
+============
+PacketScript enables the scripting of Linux Netfilter extensions using the Lua scripting language. The Lua scripts are loaded with the iptables command line tool. PacketScript can be easily extended (using C or Lua) to support a wide range of networking protocols.
+
+Compilation
+-----------
+In order to compile PacketScript you must ...
+1. ... install the Xtables-addons framework http://sourceforge.net/projects/xtables-addons/.
+2. ... copy the LUA directory to the 'xtables-addons-1.xy/extensions' directory
+3. ... add 'build_LUA=m' to the 'xtables-addons-1.xy/mconfig' file
+3. ... add 'obj-${build_LUA} += LUA/' to the 'xtables-addons-1.xy/extensions/Mbuild' file
+4. ... add 'obj-${build_LUA} += LUA/' to the 'xtables-addons-1.xy/extensions/Kbuild' file
+
+run configure and make in the 'xtables-addons-1.xy' directory
